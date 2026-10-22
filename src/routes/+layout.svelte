@@ -1,13 +1,21 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '#lib/assets/favicon.svg';
+	import logo from "#lib/assets/tyson-foods.svg"
 	import type { LayoutProps } from './$types';
+	import { ScrollArea } from '#lib/shadcn/ui/scroll-area/index.ts';
+	import NavHistory from '#lib/components/nav-history.svelte';
 
 	let { children }: LayoutProps = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<title>Tyson SAP</title>
+	<link rel="icon" href={logo} />
 </svelte:head>
 
-{@render children()}
+<div id="navbar" class="rounded-md border-2 px-4 py-2 shadow-md">
+	<NavHistory />
+</div>
+<ScrollArea class="h-full min-h-0 w-full rounded-md border-2 p-4 gap-4 shadow-md">
+	{@render children()}
+</ScrollArea>
