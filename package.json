@@ -48,7 +48,9 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
+		"@neisanworks/neisan-mongo": "1.0.3",
 		"@types/titlecase": "^1.1.2",
+		"mode-watcher": "^1.1.0",
 		"titlecase": "^1.1.3"
 	}
 }
